@@ -10,5 +10,5 @@ export default gulp.task('index', () => {
     .pipe(jade())
     .pipe(replace('<!--scripts-->', `<script src='bundle.js?v=${pkg.version}'></script>`))
     .pipe(replace('<!--styles-->', `<link href='bundle.css?v=${pkg.version}' rel='stylesheet'>`))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./build'));
 });
