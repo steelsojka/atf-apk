@@ -5,7 +5,8 @@ import runSequence from 'run-sequence';
 
 export default gulp.task('default', done => {
   runSequence(
-    ['scripts', 'index', 'pages'],
+    'clean:build',
+    ['scripts', 'pages', 'styles'],
     'connect',
     done
   );
