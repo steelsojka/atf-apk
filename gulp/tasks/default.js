@@ -7,7 +7,7 @@ export default gulp.task('default', done => {
   runSequence(
     'clean:build',
     ['scripts', 'pages', 'styles'],
-    'connect',
+    ['connect', 'watch'],
     done
   );
 });
