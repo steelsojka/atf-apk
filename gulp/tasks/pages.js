@@ -9,13 +9,17 @@ import { argv } from 'yargs';
 import through from 'through2';
 import fs from 'fs';
 import path from 'path';
+import urlStripper from '../url-stripper';
+
+const urlPrefix = urlStripper.getDestination(argv.destination);
 
 export default gulp.task('pages', () => {
   return gulp.src('./src/pages/*.jade')
     .pipe(page('./src/wrapper.jade'))
     .pipe(gulpif(argv.release, jade(), jade({ pretty: true })))
-    .pipe(replace('<!--scripts-->', `<script src='bundle.js?v=${pkg.version}'></script>`))
-    .pipe(replace('<!--styles-->', `<link href='bundle.css?v=${pkg.version}' rel='stylesheet'>`))
+    .pipe(replace('<!--scripts-->', `<script src='${urlPrefix}bundle.js?v=${pkg.version}'></script>`))
+    .pipe(replace('<!--styles-->', `<link href='${urlPrefix}bundle.css?v=${pkg.version}' rel='stylesheet'>`))
+    .pipe(urlStripper(argv.destination))
     .pipe(gulp.dest('./build'));
 });
 

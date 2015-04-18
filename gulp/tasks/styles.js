@@ -5,6 +5,7 @@ import concat from 'gulp-concat';
 import gulpif from 'gulp-if';
 import minify from 'gulp-minify-css';
 import { argv } from 'yargs';
+import urlStripper from '../url-stripper';
 
 export default gulp.task('styles', () => {
   return gulp.src([
@@ -13,6 +14,7 @@ export default gulp.task('styles', () => {
     'src/styles/*.css'
   ])
     .pipe(concat('bundle.css'))
+    .pipe(urlStripper(argv.destination))
     .pipe(gulpif(argv.release, minify()))
     .pipe(gulp.dest('./build'));
 });
