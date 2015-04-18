@@ -19,6 +19,10 @@ body {
   left: 0;
 }
 
+.pull-right {
+  float: right;
+}
+
 .distressed-a {
   z-index: 1;
   background-image: url(assets/images/distress_a.svg);
@@ -79,7 +83,7 @@ body {
   font-family: 'AlienLeague';
   font-size: 26px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   padding-bottom: 5px;
   border-bottom: 1px solid #FFFFFF;
 }
@@ -106,19 +110,28 @@ footer a {
 }
 
 footer a:hover,
+.color-grey,
 footer .footer-links:after {
   color: rgba(0, 0, 0, 0.5);
 }
 
-footer .footer-links {
+footer .footer-link {
   font-family: 'AlienLeague';
   font-size: 20px;
   font-weight: bold;
 }
 
-footer .footer-links:after {
+footer .footer-link:after {
   content: "|";
   padding: 0 10px;
+}
+
+.footer-links {
+  margin-bottom: 5px;
+}
+
+.copywright {
+  font-size: 14px;
 }
 
 nav > div {
