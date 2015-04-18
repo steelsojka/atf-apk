@@ -3,7 +3,7 @@
 import through from 'through2';
 
 const DESTINATIONS = {
-  github: '{{ site.baseurl }}/'
+  github: 'atf-apk/'
 };
 
 const MATCHER = /\{\{\s*baseurl\s*\}\}/g;
