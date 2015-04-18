@@ -1,3 +1,51 @@
+@font-face {
+  font-family: 'AlienLeague';
+  src: url('assets/fonts/alienleaguebold.ttf') format('truetype');
+}
+
+html,
+body,
+.wrapper,
+.main,
 .main-content {
-  width: 940px;
+  height: 100%;
+}
+
+.main {
+  background-color: #000000;
+}
+
+.main-content {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+  margin: auto;
+  max-width: 1024px;
+}
+
+.wrapper {
+  background-image: url(assets/images/distress_a.svg);
+  background-position: center center;
+  background-size: 100% 100%; 
+  background-attachment: fixed;
+}
+
+.hero svg {
+  height: 100%;
+  width: 100%;
+}
+
+.content-cell {
+  padding: 10px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header {
+  font-family: 'AlienLeague';
+  font-size: 26px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #FFFFFF;
 }
