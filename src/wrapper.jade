@@ -2,9 +2,16 @@ doctype html
 html
   include ../partials/head.jade
   body
+    div.fader
     div.main.col-xs-12
-      // include ../partials/navigation.jade
       div.row.wrapper
         div.main-content.col-xs-12.container
-          //content-include
+          div.col-xs-12
+            div.hero
+              include ../assets/images/atf_logo.svg
+            nav.row
+              div Home
+              div Videos
+            div.row
+              //content-include
       include ../partials/footer.jade
