@@ -55,13 +55,37 @@ body {
   margin-bottom: 10px;
 }
 
-.header {
+.left-column .content-cell:last-child {
+  flex-grow: 1;
+}
+
+.content-cell.light {
+  color: #000000;
+  background-color: inherit;
+}
+
+.content-cell.light .header {
+  border-bottom: 1px solid #000000;
+}
+
+.content-cell .header {
   font-family: 'AlienLeague';
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 5px;
   padding-bottom: 5px;
   border-bottom: 1px solid #FFFFFF;
+}
+
+.album {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.album img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
 nav > div {
@@ -75,6 +99,10 @@ nav > div {
 }
 
 nav {
+  margin-bottom: 10px;
+}
+
+.video-container {
   margin-bottom: 10px;
 }
 
