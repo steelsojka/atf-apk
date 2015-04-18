@@ -115,6 +115,12 @@ footer .footer-links:after {
   color: rgba(0, 0, 0, 0.5);
 }
 
+footer svg {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
 footer .footer-link {
   font-family: 'AlienLeague';
   font-size: 20px;
