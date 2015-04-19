@@ -1,0 +1,12 @@
+#!/bin/sh 
+
+gulp build --release --destination github
+git checkout gh-pages
+
+rm -rf assets scripts gulp src dist gulpfile.js README.md package.json
+cp -R ./build/* ./
+rm -rf build
+
+git add -A
+git commit -m "chore(release): release to github pages"
+git push origin gh-pages
