@@ -1,7 +1,9 @@
 #!/bin/sh 
 
 gulp build --release --destination github
+
 git checkout gh-pages
+git pull origin gh-pages
 
 rm -rf assets scripts gulp src dist gulpfile.js README.md package.json
 cp -R ./build/* ./
