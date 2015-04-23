@@ -1,6 +1,6 @@
 #!/bin/sh 
 
-gulp build --release --destination github
+gulp build --release --destination $1
 
 git checkout gh-pages
 git pull origin gh-pages
